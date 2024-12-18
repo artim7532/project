@@ -13,7 +13,7 @@ label {
 		stage ('CLEAN_OLD_M2') {
 			
 			steps {
-				sh "rm -rf /home/saccount/.m2/repository"
+				sh "rm -rf /home/ec2-user/.m2/repository"
 				
 			}
 			
@@ -34,7 +34,7 @@ label {
 		
 				steps {
 						
-						sh "scp -r target/LoginWebApp.war saccount@10.0.2.51:/data/project/wars"
+						sh "scp -r target/LoginWebApp.war ec2-user@172.31.45.138:/mnt/server/apache-tomcat-9.0.98/webapps"
 
 						}
 				
